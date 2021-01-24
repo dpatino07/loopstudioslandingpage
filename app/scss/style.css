@@ -4,7 +4,9 @@ html {
           box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
@@ -12,6 +14,86 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Alata", "Josefin Sans", sans-serif;
+  font-size: 0.9375rem;
+  color: white;
   line-height: 1.3;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header nav {
+  padding: 32px 82px, 0px, 82px;
+}
+
+.header__logo img {
+  height: 100%;
+}
+
+.header__menu > span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: #8c8c8c;
+}
+
+.header__menu > span:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.header__links a {
+  color: white;
+  padding: 8px;
+}
+
+.hero {
+  background-image: url("/images/desktop/image-hero.jpg");
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  padding: 2rem 5.125rem;
+}
+
+.hero__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 326px;
+  height: auto;
+  border: 1px solid white;
+  padding: 21px 25px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 /*# sourceMappingURL=style.css.map */

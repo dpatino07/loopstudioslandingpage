@@ -1,0 +1,25 @@
+// Colors
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$darkGray: hsl(0, 0%, 55%);
+$veryDarkGray: hsl(0, 0%, 41%);
+
+// Font-sizes
+$font-sm: 0.9375rem; //15px
+$font-md: 1rem; //16px
+$font-lg: 1.125rem; //18px
+
+// Visibility
+.hide-for-mobile {
+  // hide for tablet and mobile
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  // hide for desktop viewport widths
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
