@@ -1,0 +1,41 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+  text-align: center;
+}
+
+.card1 {
+  grid-column: 3 / -4;
+  grid-row: 1;
+  height: 250px;
+  width: 365px;
+  z-index: -1;
+}
+
+.card2 {
+  padding-top: 1rem;
+  grid-column: 7 / span 8;
+  grid-row: 2;
+  background: $white;
+  height: 250px;
+  width: 450px;
+
+  &__title {
+    font-family: "Josefin Sans";
+    color: #000;
+    text-transform: uppercase;
+    font-size: $font-xl;
+    font-weight: lighter;
+    padding: 1rem;
+    z-index: 1;
+  }
+
+  &__text {
+    text-align: left;
+    padding-left: 2.875rem;
+    padding-right: 2.875rem;
+    color: $darkGray;
+    line-height: 1.6;
+  }
+}

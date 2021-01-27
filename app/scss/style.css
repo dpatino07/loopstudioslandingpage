@@ -15,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Alata", "Josefin Sans", sans-serif;
-  font-size: 0.9375rem;
+  font-size: 0.75rem;
   color: white;
   line-height: 1.3;
 }
@@ -24,6 +24,29 @@ a,
 a:visited,
 a:hover {
   text-decoration: none;
+  color: white;
+}
+
+section {
+  height: auto;
+  width: 100%;
+  margin-bottom: 1.5625rem;
+}
+
+.container {
+  width: 100%;
+  padding: 2.5rem;
+}
+
+.btn {
+  width: 150px;
+  height: 35px;
+  background-color: #000;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  overflow: hidden;
+  font-family: "Josefin Sans";
 }
 
 .flex {
@@ -50,12 +73,62 @@ a:hover {
           align-items: center;
 }
 
-.header nav {
-  padding: 32px 82px, 0px, 82px;
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
 }
 
-.header__logo img {
-  height: 100%;
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.hero {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  padding: 2rem 5.125rem;
+  background-image: url("/images/desktop/image-hero.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero .header {
+  position: relative;
+}
+
+.hero__text {
+  position: absolute;
+  margin-top: 5rem;
+  width: 500px;
+  height: 225px;
+  border: 1px solid white;
+  overflow: hidden;
+}
+
+.hero__text h1 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+  padding: 21px 30px;
+  margin: auto;
+}
+
+.header nav {
+  padding: 32px 82px, 0px, 82px;
 }
 
 .header__menu > span {
@@ -71,29 +144,161 @@ a:hover {
 
 .header__links a {
   color: white;
-  padding: 8px;
+  padding: 0.5rem;
 }
 
-.hero {
-  background-image: url("/images/desktop/image-hero.jpg");
-  background-size: cover;
-  height: auto;
-  width: 100%;
-  padding: 2rem 5.125rem;
+.cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  position: relative;
+  text-align: center;
 }
 
-.hero__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 326px;
-  height: auto;
-  border: 1px solid white;
-  padding: 21px 25px;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  font-family: "Josefin Sans", sans-serif;
+.card1 {
+  grid-column: 3 / -4;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  height: 250px;
+  width: 365px;
+  z-index: -1;
+}
+
+.card2 {
+  padding-top: 1rem;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 8;
+  grid-column: 7 / span 8;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  background: white;
+  height: 250px;
+  width: 450px;
+}
+
+.card2__title {
+  font-family: "Josefin Sans";
+  color: #000;
   text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: lighter;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.card2__text {
+  text-align: left;
+  padding-left: 2.875rem;
+  padding-right: 2.875rem;
+  color: #8c8c8c;
+  line-height: 1.6;
+}
+
+.section__title {
+  margin-left: 11rem;
+  margin-right: 11rem;
+  margin-bottom: 2.625rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid {
+  width: 100%;
+  height: auto;
+}
+
+.grid__title {
+  color: dimgray;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  font-size: 2.5rem;
   font-weight: 300;
+}
+
+.grid__row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1.125rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.grid__col {
+  position: relative;
+  height: 350px;
+  width: 200px;
+  -webkit-transition: -webkit-transform 350ms ease-in-out;
+  transition: -webkit-transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+}
+
+.grid__col::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.grid__col:hover {
+  -webkit-box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+          box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+}
+
+.grid__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: -1;
+}
+
+.grid__img-title {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+.footer {
+  background-color: #000;
+  height: auto;
+  padding: 1.5rem 4.375rem;
+}
+
+.footer__logo {
+  width: 40%;
+  height: auto;
+}
+
+.footer__links {
+  margin-top: 1rem;
+}
+
+.footer__links > a {
+  font-size: 0.975rem;
+  padding-top: 1rem;
+  padding-right: 2rem;
+}
+
+.footer__social a:not(:last-child) {
+  padding-right: 0.5rem;
+}
+
+.footer .copyright {
+  color: #8c8c8c;
 }
 /*# sourceMappingURL=style.css.map */

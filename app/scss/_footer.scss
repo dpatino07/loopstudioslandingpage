@@ -1,0 +1,31 @@
+.footer {
+  background-color: #000;
+  height: auto;
+  padding: 1.5rem 4.375rem;
+
+  &__logo {
+    width: 40%;
+    height: auto;
+  }
+
+  &__links {
+    margin-top: 1rem;
+    > a {
+      font-size: 0.975rem;
+      padding-top: 1rem;
+      padding-right: 2rem;
+    }
+  }
+
+  &__social {
+    a {
+      &:not(:last-child) {
+        padding-right: 0.5rem;
+      }
+    }
+  }
+
+  .copyright {
+    color: $darkGray;
+  }
+}

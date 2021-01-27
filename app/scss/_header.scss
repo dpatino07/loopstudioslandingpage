@@ -3,12 +3,6 @@
     padding: 32px 82px, 0px, 82px;
   }
 
-  &__logo {
-    img {
-      height: 100%;
-    }
-  }
-
   &__menu {
     > span {
       display: block;
@@ -25,7 +19,7 @@
   &__links {
     a {
       color: $white;
-      padding: 8px;
+      padding: 0.5rem;
     }
   }
 }

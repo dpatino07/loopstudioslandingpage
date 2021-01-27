@@ -22,6 +22,29 @@ a,
 a:visited,
 a:hover {
   text-decoration: none;
+  color: $white;
+}
+
+section {
+  height: auto;
+  width: 100%;
+  margin-bottom: 1.5625rem;
+}
+
+.container {
+  width: 100%;
+  padding: 2.5rem;
+}
+
+.btn {
+  width: 150px;
+  height: 35px;
+  background-color: #000;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  overflow: hidden;
+  font-family: "Josefin Sans";
 }
 
 // Flexbox
@@ -38,5 +61,20 @@ a:hover {
 
   &-ai-c {
     align-items: center;
+  }
+}
+
+// Visibility
+.hide-for-mobile {
+  // hide for tablet and mobile
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  // hide for desktop viewport widths
+  @include breakpoint-up(large) {
+    display: none;
   }
 }
